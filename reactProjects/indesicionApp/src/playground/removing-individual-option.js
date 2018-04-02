@@ -10,33 +10,9 @@ class IndecisionApp extends React.Component{
         };
     }
 
-    //Life Cycle
-    componentDidMount(){
-        const json = localStorage.getItem('options');
-        const options = JSON.parse(json);
-
-        this.setState(() => ({options: options}));
-        console.log("Fetching data");
-    }
-
-    componentDidUpdate(prevProps, prevState){
-        if (prevState.options.length !== this.state.options.length) {
-            const json = JSON.stringify(this.state.options);
-            localStorage.setItem('options', json);
-            //localStorage.getItem('options');
-            console.log("Saving data");
-        }
-        
-    }
-
-    componentWillUnmount(){
-        console.log("Component will unmount");
-    }
-
     handleDeleteOptions(){
         this.setState(() => ({options:[]}));
     }
-    //ReactDOM.render(React.createElement('p'), document.getElementById('app'));
 
     handleDeleteOption(optionToRemove){
         this.setState((prevState) => ({
