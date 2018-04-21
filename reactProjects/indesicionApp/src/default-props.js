@@ -62,6 +62,7 @@ class IndecisionApp extends React.Component{
     }
 }
 
+//Default props for class based components
 IndecisionApp.defaultProps ={
     options:[]
 };
@@ -75,6 +76,7 @@ const Header = (props) =>{
     );
 }
 
+//Default props
 Header.defaultProps = {
     title: 'Indecision'
 };
