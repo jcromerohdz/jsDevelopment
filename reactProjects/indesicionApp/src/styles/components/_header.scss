@@ -1,7 +1,7 @@
 .header{
     background: $off-black;
     color: white;
-    margin-bottom: $xl-size;
+    margin-bottom: $m-size;
     padding: $m-size 0;
 }
 
@@ -16,5 +16,11 @@
     font-size: $m-size;
     font-weight: 500;
     margin: 0;
+}
+
+@media (min-width: $desktop-brakepoint){
+    .header {
+        margin-bottom: $xl-size;
+    }
 }
 
